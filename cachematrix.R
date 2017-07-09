@@ -1,8 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This script creates a matrix which can cache its inverse
+## This is a performance optimized version of the matrix where
+## computation time is saved recalculating the inverse if the matrix has not changed
 
-## Write a short comment describing this function
 
+## This function creates a matrix which has a cacheable inverse
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -18,8 +19,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## This a updated version of the solve function to return a inverse
+## from cache if the inverse is already pre-calculated
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   m <- x$getinv()
